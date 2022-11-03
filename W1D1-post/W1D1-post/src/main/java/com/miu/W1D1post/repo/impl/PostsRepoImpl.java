@@ -50,8 +50,18 @@ static {
 
     @Override
     public void delete(int id) {
-        Post post=posts.stream().filter(p->p.getId()==id)
-                .findFirst().get();
-        posts.remove(post);
+//        Post post=posts.stream().filter(p->p.getId()==id)
+//                .findFirst().get();
+        Post post=getPostById(id);
+       posts.remove(post);
+    }
+
+    @Override
+    public void update(int id,Post post) {
+    Post post1=getPostById(id);
+    post1.setAuthor(post.getAuthor());
+    post1.setContent(post.getContent());
+    post1.setTitle(post.getTitle());
+
     }
 }

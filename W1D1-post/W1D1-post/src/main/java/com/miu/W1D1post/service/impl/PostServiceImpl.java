@@ -32,4 +32,9 @@ public class PostServiceImpl implements PostService {
     public void delete(int id) {
         postsRepo.delete(id);
     }
+
+    @Override
+    public void update(int id, Post post) {
+        postsRepo.update(id, post);
+    }
 }

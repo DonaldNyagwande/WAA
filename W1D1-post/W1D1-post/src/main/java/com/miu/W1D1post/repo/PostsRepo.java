@@ -11,7 +11,7 @@ public interface PostsRepo {
     public void save(Post post);
     public void delete(int id);
 
-    public void update(int id );
+    public void update(int id,Post post );
 
 
 

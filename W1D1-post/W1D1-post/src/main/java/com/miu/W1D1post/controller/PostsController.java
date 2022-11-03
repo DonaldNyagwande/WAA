@@ -35,4 +35,10 @@ public class PostsController {
         postService.delete(id);
     }
 
+    @PutMapping("/{id}")
+    public void update (@PathVariable("id") int id,Post post){
+        postService.update(id,post);
+    }
+
+
 }
