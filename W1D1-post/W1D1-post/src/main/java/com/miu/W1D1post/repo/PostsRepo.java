@@ -8,4 +8,6 @@ public interface PostsRepo {
     public List<Post> findAll();
     public Post getPostById(int id);
 
+    public void save(Post post);
+
 }

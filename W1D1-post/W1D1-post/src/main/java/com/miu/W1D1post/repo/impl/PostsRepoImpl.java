@@ -10,9 +10,11 @@ import java.util.List;
 @Repository
 public class PostsRepoImpl implements PostsRepo {
 public static List<Post>posts;
+private static int postId=300;
 
 static {
     posts=new ArrayList<>();
+
     Post post1=new Post(1,"UEFA Champions League","Barcelona Vs Bayern ,Who will win","CNA");
     Post post2=new Post(2,"America 2024 Elections","Do you think Trump will win again","BBC");
     Post post3=new Post(3,"October Entry for Maharishi","Maharishi makes a significant recruitment this winter for new students","Fairfield Newspaper");
@@ -35,5 +37,13 @@ static {
     public Post getPostById(int id) {
         return posts.stream().filter(p->p.getId()==id)
                 .findFirst().orElse(null);
+    }
+
+    @Override
+    public void save(Post post) {
+    post.setId(postId);
+    postId++;
+    posts.add(post);
+
     }
 }
