@@ -9,5 +9,11 @@ public interface PostsRepo {
     public Post getPostById(int id);
 
     public void save(Post post);
+    public void delete(int id);
+
+    public void update(int id );
+
+
+
 
 }

@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Repository
 public class PostsRepoImpl implements PostsRepo {
@@ -45,5 +46,12 @@ static {
     postId++;
     posts.add(post);
 
+    }
+
+    @Override
+    public void delete(int id) {
+        Post post=posts.stream().filter(p->p.getId()==id)
+                .findFirst().get();
+        posts.remove(post);
     }
 }

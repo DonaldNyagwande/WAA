@@ -8,4 +8,6 @@ public interface PostService {
     public List<Post> findAll();
     public Post getPostById(int id);
     public void save(Post post);
+
+    public void delete(int id);
 }
