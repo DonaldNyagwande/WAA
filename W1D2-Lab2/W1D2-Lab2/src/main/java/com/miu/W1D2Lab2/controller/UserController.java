@@ -39,6 +39,7 @@ public class UserController {
     @PostMapping("/{id}/posts")
     public void addPost(@PathVariable("id") long id,@RequestBody List<Post> post){
         userService.addPost(id,post);
+        System.out.println("I caught you");
     }
 
 }

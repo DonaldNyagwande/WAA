@@ -21,5 +21,9 @@ public class Users {
     @JoinColumn
     List<Post> posts=new ArrayList<>();
 
+    public void addPost(Post post){
+        posts.add(post);
+    }
+
 
 }
