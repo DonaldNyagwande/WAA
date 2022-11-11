@@ -1,34 +1,18 @@
 -- USERS
 
-INSERT INTO users
-    (id, name)
-VALUES
-    (1, 'Donald');
+INSERT INTO users (id, email, firstname, lastname, password)
+VALUES (1, 'uinan@miu.edu', 'umur', 'inan', '$2a$12$IKEQb00u5QpZMx4v5zMweu.3wrq0pS7XLCHO4yHZ.BW/yvWu1feo2'); --123
+INSERT INTO users (id, email, firstname, lastname, password)
+VALUES (2, 'john@miu.edu', 'john', 'doe', '$2a$12$IKEQb00u5QpZMx4v5zMweu.3wrq0pS7XLCHO4yHZ.BW/yvWu1feo2'); --123
+INSERT INTO users (id, email, firstname, lastname, password)
+VALUES (3, 'dean@miu.edu', 'Dean', 'Altarawneh', '$2a$12$IKEQb00u5QpZMx4v5zMweu.3wrq0pS7XLCHO4yHZ.BW/yvWu1feo2'); --123
 
-INSERT INTO users
-    (id, name)
-VALUES
-    ( 2, 'Mike');
 
-INSERT INTO users
-    (id, name)
-VALUES
-    ( 3, 'Youcef');
-
-INSERT INTO users
-    ( id, name)
-VALUES
-    (4, 'San');
-
-INSERT INTO users
-    (id, name)
-VALUES
-    (5, 'Sebastian');
-
-INSERT INTO users
-    (id, name)
-VALUES
-    (6, 'Hermon');
+--Roles
+INSERT INTO role (id, role)
+VALUES (1, 'ADMIN');
+INSERT INTO role (id, role)
+VALUES (2, 'USER');
 
 
 -- POSTS
