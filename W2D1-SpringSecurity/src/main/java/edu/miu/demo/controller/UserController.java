@@ -16,24 +16,24 @@ import java.util.List;
 public class UserController {
     @Autowired
     UserService userService;
-    @GetMapping
-    @Log("Executing method 1")
-    @ExecutionTime
+    @GetMapping("/admin")
+//    @Log("Executing method 1")
+//    @ExecutionTime
     public List<User> getAll(){
         System.out.println("*** getAll() is called ***");
         return userService.findAll();
     }
 
     @GetMapping("/{id}")
-    @Log("Executing method 2")
-    @ExecutionTime
+//    @Log("Executing method 2")
+//    @ExecutionTime
     public User getById(@PathVariable("id") long id){
         System.out.println("*** getById() is called ***");
         return userService.findById(id);
     }
     @PostMapping
-    @Log("Executing method 3")
-    @ExecutionTime
+//    @Log("Executing method 3")
+//    @ExecutionTime
     public void create(@RequestBody User user){
         userService.save(user);
     }
