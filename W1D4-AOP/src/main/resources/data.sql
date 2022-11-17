@@ -3,32 +3,32 @@
 INSERT INTO users
     (id, name)
 VALUES
-    (1, 'Dani');
+    (1, 'Donald');
 
 INSERT INTO users
     (id, name)
 VALUES
-    ( 2, 'Selam');
+    ( 2, 'Kevin');
 
 INSERT INTO users
     (id, name)
 VALUES
-    ( 3, 'Martha');
+    ( 3, 'Tattiana');
 
 INSERT INTO users
     ( id, name)
 VALUES
-    (4, 'Abel');
+    (4, 'Rahel');
 
 INSERT INTO users
     (id, name)
 VALUES
-    (5, 'Sami');
+    (5, 'Jasmine');
 
 INSERT INTO users
     (id, name)
 VALUES
-    (6, 'Sara');
+    (6, 'Loveness');
 
 
 -- POSTS
@@ -36,7 +36,7 @@ VALUES
 INSERT INTO posts
     (id, author, content, title,user_id)
 VALUES
-    (1, 'james', 'awesome', 'iPhone', 1);
+    (1, 'Donald', 'awesome', 'iPhone', 1);
 
 INSERT INTO posts
     (id, author, content, title,user_id)

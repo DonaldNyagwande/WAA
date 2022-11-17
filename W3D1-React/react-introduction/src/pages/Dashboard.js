@@ -1,11 +1,20 @@
 // import React, {useState} from "react";
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import Posts from "../components/Posts";
 import PostDetails from "../components/PostDetails";
 
 function Dashboard() {
   const [postDetails, setPostDetails] = useState({});
   const [title, setTitle] = useState("");
+
+  useEffect(()=>{
+    async function fetchData(){
+      let data =await fetch("http://localhost:8080/api/v1/posts/");
+      console.log(data.json());
+    }
+    fetchData();
+
+  },[]);
 
   const postDataInitial = [
     { id: 111, title: "Happiness", author: "John" },

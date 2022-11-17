@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 @Repository
 public class PostsRepoImpl implements PostsRepo {
 public static List<Post>posts;
-private static int postId=300;
+private static int postId=5;
 
 static {
     posts=new ArrayList<>();

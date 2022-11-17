@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "*",allowedHeaders = "*")
 @RequestMapping("api/v1/posts")
 public class PostsController {
     @Autowired
@@ -27,6 +28,8 @@ public class PostsController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public void save (@RequestBody Post post){
+        System.out.println(post);
+
         postService.save(post);
     }
 
