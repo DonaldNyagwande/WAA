@@ -12,7 +12,7 @@ function Dashboard() {
       let data =await fetch("http://localhost:8080/api/v1/posts/");
       console.log(data.json());
     }
-    fetchData();
+    fetchData().then(r => r.data);
 
   },[]);
 
